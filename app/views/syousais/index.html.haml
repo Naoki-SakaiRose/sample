@@ -1,0 +1,304 @@
+= render 'home/header'
+%div.nav
+  %ul.listsLeft
+    %li.listsLeft__item.listsLeft__item--first
+      = link_to("/") do
+        %a#catBtn
+          カテゴリー
+      %div.tree.displayNone
+        %ul.categoryTree
+          %li.categoryTree--item
+            = link_to("/", id:"1") do
+              レディース
+          %li.categoryTree--item
+            = link_to("/") do
+              %a#2
+                メンズ
+          %li.categoryTree--item
+            = link_to("/") do
+              %a#3
+                ベビー・キッズ
+          %li.categoryTree--item
+            = link_to("/") do
+              %a#4
+                インテリア・住まい・小物
+          %li.categoryTree--item
+            = link_to("/") do
+              %a#5
+                本・音楽・ゲーム
+          %li.categoryTree--item
+            = link_to("/") do
+              %a#6
+                おもちゃ・ホビー・グッズ
+          %li.categoryTree--item
+            = link_to("/") do
+              %a#7
+                コスメ・香水・美容
+          %li.categoryTree--item
+            = link_to("/") do
+              %a#8
+                家電・スマホ・カメラ
+          %li.categoryTree--item
+            = link_to("/") do
+              %a#9
+                スポーツ・レジャー
+          %li.categoryTree--item
+            = link_to("/") do
+              %a#10
+                ハンドメイド
+          %li.categoryTree--item
+            = link_to("/") do
+              %a#11
+                チケット
+          %li.categoryTree--item
+            = link_to("/") do
+              %a#12
+                自動車・オートバイ
+          %li.categoryTree--item
+            = link_to("/") do
+              %a#13
+                その他
+
+%nav.breadCrumbs
+  %ul
+    %li
+      = link_to("/") do
+        %a
+          FURIMA
+    %li>
+      %i.fa.fa-angle-right
+    %li>
+      = link_to("/") do
+        %a
+          ベビー・キッズ
+    %li>
+      %i.fa.fa-angle-right
+    %li>
+      = link_to("/") do
+        %a
+          ベビー服(男の子用)  ~95cm
+    %li>
+      %i.fa.fa-angle-right
+    %li>
+      = link_to("/") do
+        %a
+          アウター
+    %li>
+      %i.fa.fa-angle-right
+    %li>
+      %p
+        ee
+%div.main
+  %div.showMain
+    %div.contentLeftqq
+    %div.contentRight
+      %div.topContent
+        %div.itemBox
+          %h2.itemBox__name
+            ee
+          %div.itemBox__body
+            %ul>
+              %li>
+                = image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/16/IMG_9072.JPG"
+                %ul>
+                  %li>
+                    = image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/16/IMG_9072.JPG", size: "75x75"
+                  %li>
+                    = image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/17/IMG_9069.JPG", size: "75x75"
+          %div.itemBox__price
+            %span
+              ¥1000
+            %div.itemBox__price-detail
+            %span
+              (税込)
+            %span
+              送料込み
+        %div.itemDetail
+          eee
+          %div.table
+            %table
+              %tbody
+                %tr
+                  %th
+                    出品者
+                  %td
+                    ss
+                %tr
+                  %th
+                    カテゴリー
+                  %td
+                    = link_to("/") do
+                      %a
+                      ベビー・キッズ
+                    %br
+                    = link_to("/") do
+                      %a
+                        ベビー服(男の子用)  ~95cm
+                    %br>
+                    = link_to("/") do
+                      %a
+                        アウター
+                %tr
+                  %th
+                    ブランド
+                  %td
+                %tr
+                  %th
+                    商品のサイズ
+                  %td
+                %tr
+                  %th
+                    商品の状態
+                  %td
+                    新品/未使用
+                %tr
+                  %th
+                    配送料の負担
+                  %td
+                    送料込み（出品者負担）
+                %tr
+                  %th
+                    発送元の地域
+                  %td
+                    = link_to("/") do
+                      %a
+                        北海道
+                %tr
+                  %th
+                    発送日の目安
+                  %td
+                    1-2日で発送
+          %div.optionalArea
+            %ul>
+              %li#likeBtn.optionalBtn.likeBtn
+                %i.fa.fa-star
+                お気に入り 0
+            %ul.optional
+              %li.optionalBtn
+                = link_to("/") do
+                  %a
+                    %i.fa.fa-flag
+                    不適切な商品の通報
+        %div.commentBox
+          %ul.commentContents
+          = form_for @syousai,:url => {:action => :index} do |f|
+            = f.text_field :name, placeholder: "キーワードから探す", class: "searchBox--input", id: "searchInput"
+            = f.submit "検索", class: "searchBox--input"
+            %p.noticeMsg
+              相手のことを考え丁寧なコメントを心がけましょう。
+              %br
+              不快な言葉遣いなどは利用制限や退会処分となることがあります。
+            %br
+              %i.fa.fa-comment
+                コメントする
+      %ul.links
+        %li
+          = link_to("/") do
+            %a
+              %i.fa.fa-angle-left
+              %span
+                前の商品
+        %li
+          = link_to("/") do
+            %a
+              %span
+                後ろの商品
+              %i.fa.fa-angle-right
+      %div.relatedItems
+        = link_to("/") do
+          %a
+            ベビー・キッズをもっと見る
+        %div.productLists
+          %div.productList
+            = link_to("/products/3") do
+              %a
+                %figure.productList--img
+                  = image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/13/a007.png"
+              %div.productList--body
+                %h3.name
+                  product3
+                %div.details
+                  %ul
+                    %li
+                      30000円
+                    %li
+                      %i.fa.fa-star.likeIcon
+                        0
+                  %p
+                    (税込)
+%aside.appBanner
+  %div.inner
+    %h2.inner__title
+      だれでもかんたん、人生を変えるフリマアプリ
+    %p.inner__text
+      今すぐ無料ダウンロード！
+    %div.inner__icon
+      = link_to("/") do
+        %a
+          = image_tag "/assets/app-store-9c5e28e8f81bd9912e0ded2f78821e04778a1356c05dc7c7bf1e88614be37c34.svg", class: "linkIcon aBtn"
+      = link_to("/") do
+        %a
+          = image_tag "/assets/google-play-469c63f1269e456307c4dde176b33cc3bbbbf142ac4d7369656010130149db1a.svg", class: "linkIcon gBtn"
+
+%div.footer
+  %ul.contents
+    %li.content
+      %h2.content__head
+        FURIMAについて
+      %ul
+        %li
+          = link_to("/") do
+            %a
+              会社概要（運営会社）
+        %li
+          = link_to("/") do
+            %a
+              プライバシーポリシー
+        %li>
+          = link_to("/") do
+            %a
+              FURIMA利用規約
+        %li
+          = link_to("/") do
+            %a
+              ポイントに関する特約
+    %li.content
+      %h2.content__head
+        FURIMAを見る
+      %ul
+        %li
+          = link_to("/") do
+            %a
+              カテゴリー一覧
+        %li
+          = link_to("/") do
+            %a
+              ブランド一覧
+    %li.content
+      %h2.content__head
+        ヘルプ＆ガイド
+      %ul
+        %li
+          = link_to("/") do
+            %a
+              FURIMAガイド
+        %li
+          = link_to("/") do
+            %a
+              FURIMAロゴ利用ガイドライン
+        %li>
+          = link_to("/") do
+            %a
+              お知らせ
+  %div.footer__logo
+    = link_to("/") do
+      %a
+        = image_tag "/assets/logo-white.png"
+  %p
+    © FURIMA
+= link_to("/") do
+  %a
+    %div.purchaseBtn
+      %span.purchaseBtn__text
+        出品する
+      = image_tag "/assets/icon_camera.png", class: "purchaseBtn__icon"
